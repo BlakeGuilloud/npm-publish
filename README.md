@@ -41,7 +41,7 @@ $ npm -v
 3.10.10
 ```
 
-*Depending on what the LTS (Long Term Stable) version of node is at the time of installation, you may see different node and npm version results when calling -v (--version).*
+*Depending on what the LTS (Long Term Support) version of node is at the time of installation, you may see different node and npm version results when calling -v (--version).*
 
 #### Step 2: Sign up for and login to npm.
 Visit www.npmjs.com and create an account.
