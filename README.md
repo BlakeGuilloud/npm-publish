@@ -13,7 +13,7 @@ I will be calling my package `strip-and-shape-phone` throughout the course of th
 ### End Result:
 After successfully writing, publishing, and installing your npm package, it should be accessible in any project that lists it as a dependency.
 ```javascript
-import stripAndShapePhone from 'strip-and-shape-phone'; // Your NPM package.
+const stripAndShapePhone = require('strip-and-shape-phone'); // Your NPM package.
 
 const phoneNumber = '843-555-1234'; // The string to be formatted.
 
@@ -150,7 +150,7 @@ $ npm install strip-and-shape-phone --save
 You now have access to require or import your package as a dependency of `a-different-project`, and utilize it the way you would any npm package.
 
 ```javascript
-import stripAndShapePhone from 'strip-and-shape-phone'; // Your NPM package.
+const stripAndShapePhone = require('strip-and-shape-phone'); // Your NPM package.
 
 const phoneNumber = '843-555-1234'; // The string to be formatted.
 
@@ -177,7 +177,7 @@ A utility function that prefaces a phone number with '+1'.
 
 Usage:
 
-import stripAndShapePhone from 'strip-and-shape-phone'; // Your NPM package.
+const stripAndShapePhone = require('strip-and-shape-phone'); // Your NPM package.
 
 const phoneNumber = '843-555-1234'; // The string to be formatted.
 
