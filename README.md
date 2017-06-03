@@ -78,7 +78,7 @@ Make sure you are in the repository that you want to publish to npm, an initiali
 $ npm init
 name: strip-and-shape-phone
 version: (1.0.0)
-description: A utility for formatted a phone number
+description: A utility for formatting a phone number
 entry point: (index.js)
 test command:
 git repository:
@@ -95,7 +95,7 @@ Your `package.json` file should look something like this:
 {
   "name": "strip-and-shape-phone",
   "version": "1.0.0",
-  "description": "A utility for formatted a phone number",
+  "description": "A utility for formatting a phone number",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
