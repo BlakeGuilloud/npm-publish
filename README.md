@@ -15,11 +15,9 @@ After successfully writing, publishing, and installing your npm package, it shou
 ```javascript
 import stripAndShapePhone from 'strip-and-shape-phone'; // Your NPM package.
 
-
 const phoneNumber = '843-555-1234'; // The string to be formatted.
 
 const formattedNumber = stripAndShapePhone(phoneNumber); // Calling the imported package.
-
 
 formattedNumber === '+18435551234'; // true
 ```
@@ -62,9 +60,9 @@ Logged in as fbguillo on https://registry.npmjs.org/.
 We will first be making a new directory, with a single file called `index.js`.
 
 ```
-$ mkdir stripAndShapePhone
+$ mkdir strip-and-shape-phone
 
-$ cd stripAndShapePhone
+$ cd strip-and-shape-phone
 
 $ touch index.js
 ```
@@ -74,7 +72,7 @@ $ atom .
 ```
 
 #### Step 4: Initialize npm in your repository.
-Make sure you are in the repository that you want to publish to npm.
+Make sure you are in the repository that you want to publish to npm, an initialize it with npm.
 
 ```
 $ npm init
@@ -110,7 +108,7 @@ Your `package.json` file should look something like this:
 Whatever file is listed as the value of property `"main"` will be what is called when your package is referenced.
 
 #### Step 5: Write the code.
-The following code will be written in the `stripAndShapePhone/index.js` file.
+The following code will be written in the `strip-and-shape-phone/index.js` file.
 
 ```javascript
 function stripAndShapePhone(phoneNumber) {
@@ -154,11 +152,53 @@ You now have access to require or import your package as a dependency of `a-diff
 ```javascript
 import stripAndShapePhone from 'strip-and-shape-phone'; // Your NPM package.
 
+const phoneNumber = '843-555-1234'; // The string to be formatted.
+
+const formattedNumber = stripAndShapePhone(phoneNumber); // Calling the imported package.
+
+formattedNumber === '+18435551234'; // true
+```
+
+#### Step 8: Versioning your package.
+So we now have a package published on the npm-registry, but we forgot to publish documentation on how to utilize our newly created function.
+
+Let's create a `README.md` in our `strip-and-shape-phone` project.
+
+```
+$ touch README.md
+```
+
+Inside of your README, document what your package does, and how to use it:
+```javascript
+
+#### strip-and-shape-phone
+
+A utility function that prefaces a phone number with '+1'.
+
+Usage:
+
+import stripAndShapePhone from 'strip-and-shape-phone'; // Your NPM package.
 
 const phoneNumber = '843-555-1234'; // The string to be formatted.
 
 const formattedNumber = stripAndShapePhone(phoneNumber); // Calling the imported package.
 
-
 formattedNumber === '+18435551234'; // true
 ```
+
+Now that we have documented our npm-package, we want to publish this newly created README into the registry, so other's may know how to utilze it.
+
+First, we want to `patch` an update to the project. We utilize the `patch` method here, signifying that the update to the package is not a breaking change.
+
+```
+$ npm version patch
+v1.0.1
+```
+
+Now that we have updated the `"version"` property on our package.json, we run our `publish` command again.
+
+```
+$ npm publish
+```
+
+The newly updated code will now be included in the `strip-and-shape-phone` npm-package.
