@@ -204,3 +204,5 @@ $ npm publish
 ```
 
 The newly updated code will now be included in the `strip-and-shape-phone` npm-package.
+
+-*Blake Guilloud 2017*
