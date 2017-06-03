@@ -197,6 +197,8 @@ v1.0.1
 
 Now that we have updated the `"version"` property on our package.json, we run our `publish` command again.
 
+*There are many different versioning functions in the npm version api.* https://docs.npmjs.com/cli/version
+
 ```
 $ npm publish
 ```
